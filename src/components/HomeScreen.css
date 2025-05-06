@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: azure;
+  text-align: center;
+}
+
+.container .mode {
+  
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 40px;
+  height: 400px;
+  width: 500px;
+  background-color: #f0f0f0;
+  gap: 2rem;
+}
+.container .mode h1{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.container .mode img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  animation: rotate 2s linear infinite;
+}
+.container .mode p{
+   margin-Bottom: '2rem';
+    font-Size: '1.1rem' ;
+}
+.container .mode .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.container .mode .btn button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #1ba138;
+ 
+}
+
+
+.container .mode .btn button:hover {
+  background-color: #094612;
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
