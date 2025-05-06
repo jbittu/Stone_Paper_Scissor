@@ -1,66 +1,156 @@
-.fade-in {
-    animation: fadeIn 0.5s ease-in-out;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .choice-icon {
-    margin-top: 0.5rem;
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .choice-img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    transition: transform 0.2s ease;
-  }
-  
-  .choice-img:hover {
-    transform: scale(1.1);
-  }
-  
-  button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border: 2px solid #444;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-  }
-  
-  button:hover:not(:disabled) {
-    background-color: #ddd;
-    transform: translateY(-2px);
-  }
-  
-  button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
-  @media (max-width: 600px) {
-    .choice-img {
-      width: 45px;
-      height: 45px;
-    }
-  
-    button {
-      font-size: 0.9rem;
-      padding: 0.4rem 0.8rem;
-    }
-  
-    .fade-in {
-      padding: 0.5rem;
-    }
-  }
-  
+
+.game-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.game-container .back-button {
+  background-color: #ddd;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.back-button:hover {
+  background-color: #ccc;
+}
+
+
+.game-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+.game-container .scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.player-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.score {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+
+.choice-icon {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choice-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+
+.result {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+.choices-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.choice-button {
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.choice-button:hover {
+  transform: scale(1.1);
+  border-color: #aaa;
+}
+
+
+.next-round button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.next-round button:hover {
+  background-color: #45a049;
+}
+.rules-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.rules-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: white;
+  border: 2px solid #ccc;
+  padding: 20px;
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.rules-content h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.rules-content ul {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.close-button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
